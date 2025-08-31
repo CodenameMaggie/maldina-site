@@ -12,7 +12,31 @@
     .card{background:linear-gradient(180deg,rgba(255,255,255,.04),rgba(255,255,255,.02));border:1px solid rgba(255,255,255,.08);border-radius:var(--radius);box-shadow:var(--shadow)}
     header.nav{position:sticky;top:0;backdrop-filter:blur(8px)} header .inner{padding:.9rem 0; display:flex;justify-content:space-between;align-items:center;gap:1rem;} .brand{font-family:'Maldina',cursive;font-size:clamp(28px,4vw,40px)}
     main{padding:3rem 0} .grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1rem} @media(max-width:900px){.grid{grid-template-columns:1fr}}
-  </style>
+section { padding: 3rem 0; }
+
+  #services .header { 
+    text-align: center; 
+    margin-bottom: 1.5rem; 
+  }
+
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1.25rem;
+  }
+  @media (max-width: 900px) { 
+    .grid { grid-template-columns: 1fr; } 
+  }
+
+  .card {
+    text-align: center; 
+    padding: 1.5rem; 
+  }
+
+  .card .btn { 
+    margin-top: 0.75rem; 
+  }
+</style>
 </head>
 <body>
   <header class="nav card">
@@ -27,12 +51,31 @@
   </header>
 
   <main class="container">
-    <h1>Services</h1>
-    <div class="grid">
-      <article class="card" style="padding:1rem"><h3>Service One</h3><p>Short description.</p></article>
-      <article class="card" style="padding:1rem"><h3>Service Two</h3><p>Short description.</p></article>
-      <article class="card" style="padding:1rem"><h3>Service Three</h3><p>Short description.</p></article>
+  <section id="services" class="container">
+    <div class="header">
+      <h1>Our Packages</h1>
+      <p class="lead">Choose the experience that fits your celebration.</p>
     </div>
-  </main>
-</body>
-</html>
+
+    <div class="grid">
+      <article class="card">
+        <h2>Classic Tier</h2>
+        <p>Etiquette training, one dance, and an elegant promenade dinner.</p>
+        <a class="btn" href="mailto:events@sweet17.com?subject=Classic%20Tier%20Inquiry">Book Now</a>
+      </article>
+
+      <article class="card">
+        <h2>Signature Tier</h2>
+        <p>Classic + two dances, limousine ride, and professional photos.</p>
+        <a class="btn" href="mailto:events@sweet17.com?subject=Signature%20Tier%20Inquiry">Book Now</a>
+      </article>
+
+      <article class="card">
+        <h2>Royal Tier</h2>
+        <p>All Signature perks + weekend stay at Chateau Okanagan.</p>
+        <a class="btn" href="mailto:events@sweet17.com?subject=Royal%20Tier%20Inquiry">Book Now</a>
+      </article>
+    </div>
+  </section>
+</main>
+
