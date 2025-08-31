@@ -1,1 +1,133 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Sponsorships — Sweet 17</title>
 
+  <style>
+    /* Fonts */
+    @font-face { font-family:'Maldina'; src:url('/fonts/Maldina.ttf') format('truetype'); font-display:swap; }
+    @font-face { font-family:'Parisienne'; src:url('/fonts/Parisienne.ttf') format('truetype'); font-display:swap; }
+
+    /* Palette */
+    :root{
+      --bg:#ffffff;
+      --card:#ffffff;
+      --text:#1c1c1c;
+      --muted:#555555;
+      --accent:#d4af37;   /* gold */
+      --accent-2:#c0c0c0; /* silver */
+      --radius:20px;
+      --shadow:0 10px 30px rgba(0,0,0,.06);
+    }
+
+    *,*::before,*::after{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      color:var(--text);
+      font:16px/1.6 Georgia,"Times New Roman",Times,serif;
+      background:var(--bg) url('/images/goldglitter.png') center/cover fixed no-repeat;
+    }
+
+    a{ color:inherit; text-decoration:none }
+    a:hover{ text-decoration:underline }
+    .container{ width:min(1100px,92vw); margin:0 auto }
+    section{ padding:3.5rem 0 }
+
+    /* Header */
+    header.nav{ position:sticky; top:0; z-index:10; background:rgba(255,255,255,.85); backdrop-filter:blur(8px); border-bottom:1px solid rgba(0,0,0,.06); }
+    header .inner{ padding:.9rem 0; display:flex; justify-content:space-between; align-items:center; gap:1rem; }
+    .brand{ font-family:'Maldina',cursive; font-size:clamp(28px,4vw,40px); color:var(--accent); letter-spacing:.5px }
+
+    /* Page title */
+    .hero{ padding:4.5rem 0 2rem }
+    h1{ font-family:'Maldina',cursive; font-size:clamp(40px,6vw,72px); margin:0 0 .75rem; color:var(--accent); line-height:1.1 }
+    .lead{ color:var(--muted) }
+
+    /* Grid & cards */
+    .grid3{ display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:1.25rem; }
+    @media (max-width:900px){ .grid3{ grid-template-columns:1fr; } }
+
+    .card{ background:var(--card); border:1px solid rgba(0,0,0,.06); border-radius:var(--radius); box-shadow:var(--shadow); padding:1.5rem; }
+    .card h3{ font-family:'Parisienne',cursive; font-size:clamp(22px,3vw,28px); margin:.25rem 0 .25rem }
+    .card small{ color:var(--muted) }
+
+    /* Buttons (refined) */
+    .btn{ display:inline-block; padding:.6rem 1rem; font-size:.9rem; border-radius:999px; background:var(--accent); color:#000; font-weight:600; border:1px solid rgba(0,0,0,.1); box-shadow:0 6px 12px rgba(212,175,55,.25); }
+    .btn.alt{ background:transparent; color:var(--text); border:1px solid rgba(0,0,0,.18); box-shadow:none }
+
+    /* Divider (optional asset if you want it on this page) */
+    .divider{ width:min(320px,60%); margin:2rem auto 2.5rem; display:block; opacity:.9; }
+
+    /* Edge roses for THIS page */
+    #sponsorships{ position:relative; }
+    .rose-accent{
+      position:absolute; top:-40px; right:20px; width:180px; opacity:.12; pointer-events:none; z-index:0;
+    }
+    .rose-accent-left{
+      position:absolute; bottom:-40px; left:20px; width:180px; opacity:.12; pointer-events:none; z-index:0;
+    }
+  </style>
+</head>
+<body>
+  <header class="nav">
+    <div class="container inner">
+      <div class="brand">Maggie Forbes <img src="/images/sweet17logo.png" alt="" style="height:42px;vertical-align:middle;border-radius:10px;margin-left:.35rem;"></div>
+      <nav style="display:flex;gap:.75rem;flex-wrap:wrap">
+        <a href="/index.html">Home</a>
+        <a href="/services.html">Services</a>
+        <a href="/sponsorships.html">Sponsorships</a>
+        <a href="/about.html">About</a>
+        <a href="/index.html#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container hero">
+    <h1>Sponsorships</h1>
+    <p class="lead">Support the Sweet 17 mission and connect with a refined audience.</p>
+  </main>
+
+  <section id="sponsorships">
+    <!-- edge decorations live at the section level -->
+    <img class="rose-accent" src="/images/pinkrosebundle.png" alt="">
+    <img class="rose-accent-left" src="/images/pinkrosebundleflipped.png" alt="">
+
+    <div class="container">
+      <img class="divider" src="/images/goldfiligreeline.png" alt="">
+
+      <div class="grid3">
+        <article class="card">
+          <h3>Patron</h3>
+          <small>Program listing</small>
+          <p>Name in program + website acknowledgment.</p>
+          <a class="btn" href="/docs/Sponsorship-Package.pdf" target="_blank">View Package (PDF)</a>
+        </article>
+
+        <article class="card">
+          <h3>Benefactor</h3>
+          <small>Program + event signage</small>
+          <p>Includes Patron benefits plus signage at the ball.</p>
+          <a class="btn" href="/docs/Sponsorship-Package.pdf" target="_blank">View Package (PDF)</a>
+        </article>
+
+        <article class="card">
+          <h3>Title Sponsor</h3>
+          <small>Premier placement</small>
+          <p>Stage mentions, premium branding, and VIP seating.</p>
+          <a class="btn" href="/docs/Sponsorship-Package.pdf" target="_blank">View Package (PDF)</a>
+        </article>
+      </div>
+
+      <img class="divider" src="/images/goldfiligreeline.png" alt="">
+    </div>
+  </section>
+
+  <footer style="padding:3rem 0; text-align:center; color:#777;">
+    <div class="container">© <span id="year"></span> Maggie Forbes Strategies · All rights reserved.</div>
+  </footer>
+  <script>document.getElementById('year').textContent=new Date().getFullYear()</script>
+</body>
+</html>
